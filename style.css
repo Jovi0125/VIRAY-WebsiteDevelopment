@@ -7,26 +7,27 @@ body {
 }
 
 nav {
-  background: #333;
+  background: #ffffff;
   padding: 10px;
   text-align: center;
+  font: bold 15px Arial, sans-serif;
 }
 
 nav a {
-  color: white;
+  color: rgb(0, 0, 0);
   margin: 0 15px;
   text-decoration: none;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 header {
   text-align: center;
   padding: 50px;
-  background: #000000;
-  color: rgb(255, 255, 255);
+  background: #ffffff;
+  color: rgb(0, 0, 0);
 }
 
 section {
@@ -38,7 +39,81 @@ section {
   margin: 15px 0;
   padding: 15px;
   border-radius: 5px;
+  transition: transform 240ms ease, box-shadow 240ms ease;
+  will-change: transform, box-shadow;
 }
+.services {
+  background: white;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 5px;
+  transition: transform 240ms ease, box-shadow 240ms ease;
+  will-change: transform, box-shadow;
+}
+.contact {
+  background: white;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 5px;
+  transition: transform 240ms ease, box-shadow 240ms ease;
+  will-change: transform, box-shadow;
+}
+
+.project:hover,
+.project:focus,
+.project:focus-visible,
+.services:hover,
+.services:focus,
+.services:focus-visible,
+.contact:hover,
+.contact:focus,
+.contact:focus-visible {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.06);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .project, .services, .contact {
+    transition: none;
+    transform: none;
+  }
+}
+
+header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.intro-section {
+  display: flex;
+  justify-content: center;   
+  align-items: flex-start;   
+  margin-top: 50px;
+}
+
+.profile-pic {
+  width: 250px;              
+  height: auto;
+  border-radius: 0px;
+  margin-right: 100px;
+  transition: transform 0.5s ease-in-out; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);      
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.intro-text {
+  max-width: 500px;
+  text-align: left;
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-top: 90px;
+}
+
 
 
 
